@@ -1,6 +1,9 @@
 from flask import Flask, request, send_from_directory
 import os
 
+if not os.path.exists("files"):
+    os.mkdir("files")
+    
 app = Flask(__name__)
 
 @app.route('/')
